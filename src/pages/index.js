@@ -11,7 +11,7 @@ const CSS_TRANSITION_TIMEOUT = 300
 
 export default function() {
 
-  const { width } = useWindowSize()
+  const { width } = useWindowSize();
   const [activeView, setActiveView] = useState("form")
   const [viewHeight, setViewHeight] = useState(null)
   const viewRef = useRef(null)
@@ -53,6 +53,7 @@ export default function() {
     <Layout>
       <Title/>
       <div ref={viewRef} style={{ height: viewHeight, transition: "height 200ms ease-in" }}>
+
         <CSSTransition
           in={activeView === "form"}
           timeout={CSS_TRANSITION_TIMEOUT}
