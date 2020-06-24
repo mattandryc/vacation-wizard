@@ -110,7 +110,7 @@ export default function ({ form, onFinish, onRangeChange, onDateChange }) {
                     placeholder="请输入接班人的联系方式"
                     icon={<MailOutlined style={styles.icon}/>}/>
             </FormItem>
-            <div style={{ textAlign: "center", width: "100%", marginBottom: "40px"}}>
+            <div style={{ textAlign: "right", width: "100%", marginBottom: "40px"}}>
                 <Button
                     type="primary"
                     htmlType="submit"

@@ -1,4 +1,5 @@
 import React from "react"
+import "./link-button.css"
 
 export default function({ to, icon, children, className }) {
   return (

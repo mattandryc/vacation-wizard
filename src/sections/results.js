@@ -1,24 +1,24 @@
-import React from 'react'
-import { Alert, Divider, Button } from 'antd'
-import { CopyOutlined, ArrowLeftOutlined } from '@ant-design/icons'
+import React from "react"
+import { Alert, Divider, Button } from "antd"
+import { CopyOutlined, ArrowLeftOutlined } from "@ant-design/icons"
 
-import CopyableText from '../components/copyable-text'
-import LinkButton from '../components/link-button'
-import AirbnbLogo from '../assets/airbnb-logo'
+import CopyableText from "../components/copyable-text"
+import LinkButton from "../components/link-button"
+import AirbnbLogo from "../assets/airbnb-logo"
 
 const styles = {
   alert: {
-    marginTop: '16px',
-    fontSize: '16px',
+    marginTop: "16px",
+    fontSize: "16px"
   },
   div: {
-    marginBottom: '32px'
+    marginBottom: "40px"
   },
   section: {
-    marginBottom: '32px', display: 'flex', justifyContent: 'space-between'
+    marginBottom: "40px", display: "flex", justifyContent: "space-between"
   }
 }
-const dateFormat = 'M月D日'
+const dateFormat = "M月D日"
 
 const requestTemplate = (reason, numDays, startDate, endDate) => (
   `本人${reason}，特向您请事假${numDays}天，请假时间自${startDate.format(dateFormat)}至${endDate.format(dateFormat)}。
@@ -30,22 +30,22 @@ const responseTemplate = (startDate, endDate, contactName, contactMethod) => (
 
 export default function({ form, onBack }) {
 
-  const reason = form.getFieldValue('reason')
-  const startDate = form.getFieldValue('startDate')
-  const endDate = form.getFieldValue('endDate')
+  const reason = form.getFieldValue("reason")
+  const startDate = form.getFieldValue("startDate")
+  const endDate = form.getFieldValue("endDate")
 
-  const numDays = endDate.diff(startDate, 'days')
+  const numDays = endDate.diff(startDate, "days")
 
-  const contactName = form.getFieldValue('contactName')
-  const contactMethod = form.getFieldValue('contactMethod')
+  const contactName = form.getFieldValue("contactName")
+  const contactMethod = form.getFieldValue("contactMethod")
 
   const request = requestTemplate(reason, numDays, startDate, endDate)
   const response = responseTemplate(startDate, endDate, contactName, contactMethod)
 
   return (
-    <div className={'results'}>
+    <div className={"results"}>
       <Alert message='点击下面的段落就可以复制到剪贴板' type='info' style={styles.alert}/>
-      <div style={{ ...styles.div, marginTop: '32px' }}>
+      <div style={{ ...styles.div, marginTop: "40px" }}>
         <Divider>发给老板的 <CopyOutlined/></Divider>
         <CopyableText text={request}/>
       </div>

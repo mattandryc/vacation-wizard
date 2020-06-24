@@ -1,76 +1,82 @@
-import React, { useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
-import { Form as antd } from "antd";
-import Title from '../components/title';
-import Form from '../sections/form'
-import Results from '../sections/results';
+import React, { useState, useEffect, useRef } from "react"
+import { CSSTransition } from "react-transition-group"
+import { Form } from "antd"
+import useWindowSize from "../hooks/useWindowSize"
+import Layout from "../components/layout"
+import Title from "../components/title"
+import Inputs from "../sections/inputs"
+import Results from "../sections/results"
 
-import '../app.css';
+const CSS_TRANSITION_TIMEOUT = 300
 
-const styles = {
+export default function() {
 
-  main: {
-    margin: "0 auto",
-    position: "relative",
-    maxWidth: "256px",
-    width: "100%",
+  const { width } = useWindowSize()
+  const [activeView, setActiveView] = useState("form")
+  const [viewHeight, setViewHeight] = useState(null)
+  const viewRef = useRef(null)
+  const [form] = Form.useForm()
+
+  console.log("height", width)
+
+  useEffect(() => {
+    console.log("in use effect")
+    setViewHeight(viewRef.current?.firstChild.offsetHeight)
+  }, [width])
+
+
+  function calcHeight(el) {
+    const height = el.offsetHeight
+    setViewHeight(height)
   }
-}
 
-
-export default function () {
-
-
-  const [activeView, setActiveView] = useState("form");
-
-  const [form] = antd.useForm();
-
-  const handleRangeChange = range => {
+  const handleRangeChange = (range) => {
     if (range) {
-      form.setFieldsValue({ startDate: range[0], endDate: range[1] });
+      form.setFieldsValue({ startDate: range[0], endDate: range[1] })
     } else {
-      form.setFieldsValue({ startDate: null, endDate: null });
+      form.setFieldsValue({ startDate: null, endDate: null })
     }
-  };
+  }
 
   const handleDateChange = (key, value) => {
 
-    const range = form.getFieldValue("range");
+    const range = form.getFieldValue("range")
 
     if (key === "startDate") {
-      form.setFieldsValue({ "range": [value, range ? range[1] : null], startDate: value });
+      form.setFieldsValue({ "range": [value, range ? range[1] : null], startDate: value })
     } else {
-      form.setFieldsValue({ "range": [range ? range[0] : null, value], endDate: value });
+      form.setFieldsValue({ "range": [range ? range[0] : null, value], endDate: value })
     }
-  };
+  }
 
   const toggleActiveView = _ => {
-    setActiveView(activeView === "form" ? "results" : "form");
-  };
+    setActiveView(activeView === "form" ? "results" : "form")
+  }
 
   return (
-    <div style={styles.div}>
+    <Layout>
       <Title/>
-      <main style={styles.main}>
+      <div ref={viewRef} style={{ height: viewHeight, transition: "height 200ms ease-in" }}>
         <CSSTransition
           in={activeView === "form"}
-          timeout={300}
+          timeout={CSS_TRANSITION_TIMEOUT}
           classNames="form"
+          onEnter={calcHeight}
           unmountOnExit>
-          <Form form={form}
-                onRangeChange={handleRangeChange}
-                onDateChange={handleDateChange}
-                onFinish={toggleActiveView}/>
+          <Inputs form={form}
+                  onRangeChange={handleRangeChange}
+                  onDateChange={handleDateChange}
+                  onFinish={toggleActiveView}/>
         </CSSTransition>
-
         <CSSTransition
           in={activeView === "results"}
-          timeout={300}
+          timeout={CSS_TRANSITION_TIMEOUT}
           classNames="results"
+          onEnter={calcHeight}
           unmountOnExit>
           <Results form={form} onBack={toggleActiveView}/>
         </CSSTransition>
-      </main>
-    </div>
+      </div>
+    </Layout>
   )
 }

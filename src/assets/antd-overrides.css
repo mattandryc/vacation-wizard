@@ -1,0 +1,18 @@
+/* antd-overrides */
+.ant-form-item-explain {
+    position: absolute;
+    top: 60px;
+}
+
+/* range and date pickers */
+@media all and (min-width: 601px) {
+    .date-picker {
+        display: none;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .range-picker {
+        display: none;
+    }
+}

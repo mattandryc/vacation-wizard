@@ -1,0 +1,17 @@
+:root {
+    --speed: 200ms;
+    --airbnb-primary: #FF5A5F;
+    --airbnb-secondary: #FF8E8C;
+}
+
+/* component styles */
+.airbnb-btn {
+    border-color: var(--airbnb-primary);
+    background-color:  var(--airbnb-primary);
+}
+
+.airbnb-btn:hover {
+    color: white;
+    background-color: var(--airbnb-secondary);
+    border-color: var(--airbnb-secondary);
+}
