@@ -8,14 +8,13 @@ import AirbnbLogo from "../assets/airbnb-logo"
 
 const styles = {
   alert: {
-    marginTop: "16px",
-    fontSize: "16px"
-  },
-  div: {
-    marginBottom: "40px"
+    fontSize: "16px",
+    marginBottom: "32px"
   },
   section: {
-    marginBottom: "40px", display: "flex", justifyContent: "space-between"
+    marginBottom: "32px",
+    display: "flex",
+    justifyContent: "space-between"
   }
 }
 const dateFormat = "M月D日"
@@ -45,14 +44,8 @@ export default function({ form, onBack }) {
   return (
     <div className={"results"}>
       <Alert message='点击下面的段落就可以复制到剪贴板' type='info' style={styles.alert}/>
-      <div style={{ ...styles.div, marginTop: "40px" }}>
-        <Divider>发给老板的 <CopyOutlined/></Divider>
-        <CopyableText text={request}/>
-      </div>
-      <div style={styles.div}>
-        <Divider>设为自动回复的 <CopyOutlined/></Divider>
-        <CopyableText text={response}/>
-      </div>
+      <CopyableText title="发给老板的" text={request}/>
+      <CopyableText title="设为自动回复的" text={response}/>
       <section style={styles.section}>
         <Button onClick={onBack} type='primary' size='large' icon={<ArrowLeftOutlined/>}>上一步</Button>
         <LinkButton to='https://www.airbnb.com/' className='airbnb-btn' icon={<AirbnbLogo/>}>去看爱必迎</LinkButton>

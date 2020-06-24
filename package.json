@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "vacation-wizard",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A blazing-fast template tool to generate vacation responder text",
+  "version": "2.1.0",
+  "author": "Matt Andryc",
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "antd": "^4.3.5",

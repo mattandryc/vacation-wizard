@@ -17,13 +17,9 @@ export default function() {
   const viewRef = useRef(null)
   const [form] = Form.useForm()
 
-  console.log("height", width)
-
   useEffect(() => {
-    console.log("in use effect")
     setViewHeight(viewRef.current?.firstChild.offsetHeight)
   }, [width])
-
 
   function calcHeight(el) {
     const height = el.offsetHeight

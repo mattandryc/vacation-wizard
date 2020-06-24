@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Vacation Wizard`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Kick off your next, great vacation with this away message generator.`,
+    author: `@mattandryc`,
+    version: `2.1`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
