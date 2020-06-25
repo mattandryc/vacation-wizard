@@ -11,7 +11,9 @@ const styles = {
     width: "100%"
   },
   title: {
-    marginBottom: "8px"
+    marginBottom: "8px",
+    fontWeight: 900,
+    fontFamily: "Avenir, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue,Arial, noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji, sans-serif"
   },
   link: {
     fontSize: "16px",

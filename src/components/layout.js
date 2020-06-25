@@ -6,18 +6,20 @@ import VersionTag from "./version-tag"
 
 import "../assets/antd-overrides.css"
 import "../assets/transitions.css"
+import AnimatedBg from "../assets/animated-bg"
 
 const { Header, Content, Footer } = Layout
 
 const styles = {
   layout: {
-    backgroundColor: "white",
+    backgroundColor: "transparent",
     minHeight: "100vh"
   },
   header: {
     boxShadow: "0 2px 8px #f0f1f2",
     backgroundColor: "white",
-    textAlign: "center"
+    textAlign: "center",
+    padding: "0",
   },
   div: {
     display: "flex",
@@ -27,7 +29,7 @@ const styles = {
   },
   content: {
     position: "relative",
-    maxWidth: "296px",
+    maxWidth: "292px",
     margin: "0 auto",
   },
   footer: {
@@ -48,6 +50,7 @@ export default ({ children }) => {
 
   return (
     <Layout style={styles.layout}>
+      <AnimatedBg/>
       <Header style={styles.header}>
         <AppBar/>
       </Header>

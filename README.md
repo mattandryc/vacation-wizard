@@ -1,0 +1,3 @@
+- background
+- favicon
+- container at smaller viewports
