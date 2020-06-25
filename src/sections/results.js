@@ -1,6 +1,6 @@
 import React from "react"
-import { Alert, Divider, Button } from "antd"
-import { CopyOutlined, ArrowLeftOutlined } from "@ant-design/icons"
+import { Alert, Button } from "antd"
+import { ArrowLeftOutlined } from "@ant-design/icons"
 
 import CopyableText from "../components/copyable-text"
 import LinkButton from "../components/link-button"

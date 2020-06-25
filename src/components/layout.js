@@ -5,11 +5,9 @@ import AppBar from "./app-bar"
 import VersionTag from "./version-tag"
 
 import "../assets/antd-overrides.css"
-import "./layout.css"
-import "./transitions.css"
+import "../assets/transitions.css"
 
 const { Header, Content, Footer } = Layout
-
 
 const styles = {
   header: {
@@ -27,7 +25,8 @@ const styles = {
     position: "relative",
     maxWidth: "296px",
     margin: "0 auto"
-  }
+  },
+
 }
 
 export default ({ children }) => {
