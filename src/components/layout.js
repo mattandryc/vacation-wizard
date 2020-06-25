@@ -10,6 +10,10 @@ import "../assets/transitions.css"
 const { Header, Content, Footer } = Layout
 
 const styles = {
+  layout: {
+    backgroundColor: "white",
+    minHeight: "100vh"
+  },
   header: {
     boxShadow: "0 2px 8px #f0f1f2",
     backgroundColor: "white",
@@ -24,9 +28,10 @@ const styles = {
   content: {
     position: "relative",
     maxWidth: "296px",
-    margin: "0 auto"
+    margin: "0 auto",
   },
-
+  footer: {
+  }
 }
 
 export default ({ children }) => {
@@ -42,16 +47,16 @@ export default ({ children }) => {
   `)
 
   return (
-    <>
+    <Layout style={styles.layout}>
       <Header style={styles.header}>
         <AppBar/>
       </Header>
       <Content style={styles.content}>
         {children}
       </Content>
-      <Footer>
+      <Footer style={styles.footer}>
         <VersionTag/>
       </Footer>
-    </>
+    </Layout>
   )
 }

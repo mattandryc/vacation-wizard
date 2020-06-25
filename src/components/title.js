@@ -7,8 +7,7 @@ const { Title, Link } = Typography
 const styles = {
   section: {
     textAlign: "center",
-    marginTop: "5vmin",
-    marginBottom: "32px",
+    margin: "40px 0 20px 0",
     width: "100%"
   },
   title: {
