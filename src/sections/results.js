@@ -7,9 +7,13 @@ import LinkButton from "../components/link-button"
 import AirbnbLogo from "../assets/airbnb-logo"
 
 const styles = {
+  div: {
+    maxWidth: "256px",
+  },
   alert: {
     fontSize: "16px",
-    marginBottom: "32px"
+    marginBottom: "32px",
+    borderRadius: "8px"
   },
   section: {
     marginBottom: "32px",
@@ -42,7 +46,7 @@ export default function({ form, onBack }) {
   const response = responseTemplate(startDate, endDate, contactName, contactMethod)
 
   return (
-    <div className={"results"}>
+    <div style={styles.div} className="results">
       <Alert message='点击下面的段落就可以复制到剪贴板' type='info' style={styles.alert}/>
       <CopyableText title="发给老板的" text={request}/>
       <CopyableText title="设为自动回复的" text={response}/>

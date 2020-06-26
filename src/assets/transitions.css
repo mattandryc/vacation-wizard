@@ -1,32 +1,33 @@
 /* css-transitions */
-.form, .results {
+.inputs, .results {
     position: absolute;
     width: 100%;
+    top: 0;
 }
 
-.form-enter {
+.inputs-enter {
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(-20%);
 }
 
-.form-enter-active {
+.inputs-enter-active {
     transform: translateX(0%);
     opacity: 1;
     transition: all var(--speed) ease;
 }
 
-.form-exit {
+.inputs-exit {
 }
 
-.form-exit-active {
-    transform: translateX(-50%);
+.inputs-exit-active {
+    transform: translateX(-20%);
     opacity: 0;
     transition: all var(--speed) ease;
 }
 
 .results-enter {
     opacity: 0;
-    transform: translateX(50%);
+    transform: translateX(20%);
 }
 
 .results-enter-active {
@@ -40,6 +41,6 @@
 
 .results-exit-active {
     opacity: 0;
-    transform: translateX(50%);
+    transform: translateX(20%);
     transition: all var(--speed) ease;
 }

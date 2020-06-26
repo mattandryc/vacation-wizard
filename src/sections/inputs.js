@@ -8,6 +8,9 @@ import RangePicker from '../components/range-picker';
 import DatePicker from '../components/date-picker';
 
 const styles = {
+    form: {
+        maxWidth: "256px"
+    },
     icon: {
         color: "rgba(0, 0, 0, 0.25)",
     }
@@ -23,7 +26,7 @@ const FormItem = ({ name, message, children, ...otherProps }) => {
         <Form.Item
             name={name}
             gutter={[0, 40]}
-            rules={[{ required: true, message }]}
+            rules={[{ required: false, message }]}
             {...otherProps}
         >
             {children}
@@ -38,7 +41,8 @@ export default function ({ form, onFinish, onRangeChange, onDateChange }) {
             form={form}
             onFinish={onFinish}
             layout="vertical"
-            className="form"
+            className="inputs"
+            style={styles.form}
         >
             <Divider>请假基本信息</Divider>
             <FormItem name="reason" message="必须选择请假原因">
@@ -110,7 +114,7 @@ export default function ({ form, onFinish, onRangeChange, onDateChange }) {
                     placeholder="请输入接班人的联系方式"
                     icon={<MailOutlined style={styles.icon}/>}/>
             </FormItem>
-            <div style={{ textAlign: "right", width: "100%", marginBottom: "40px"}}>
+            <div style={{ textAlign: "right", width: "100%", paddingBottom: "40px"}}>
                 <Button
                     type="primary"
                     htmlType="submit"

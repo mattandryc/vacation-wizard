@@ -3,16 +3,26 @@ import { CSSTransition } from "react-transition-group"
 import { Form } from "antd"
 import useWindowSize from "../hooks/useWindowSize"
 import Layout from "../components/layout"
-import Title from "../components/title"
+import Card from "../components/card"
+import Header from "../components/header"
 import Inputs from "../sections/inputs"
 import Results from "../sections/results"
 
 const CSS_TRANSITION_TIMEOUT = 300
 
+const styles = {
+  main: {
+    position: "relative",
+    transition: "height 200ms ease-in",
+    display: "flex",
+    justifyContent: "center",
+  }
+}
+
 export default function() {
 
-  const { width } = useWindowSize();
-  const [activeView, setActiveView] = useState("form")
+  const { width } = useWindowSize()
+  const [activeView, setActiveView] = useState("inputs")
   const [viewHeight, setViewHeight] = useState(null)
   const viewRef = useRef(null)
   const [form] = Form.useForm()
@@ -46,34 +56,37 @@ export default function() {
   }
 
   const toggleActiveView = _ => {
-    setActiveView(activeView === "form" ? "results" : "form")
+    setActiveView(activeView === "inputs" ? "results" : "inputs")
   }
+
 
   return (
     <Layout>
-      <Title/>
-      <div ref={viewRef} style={{ height: viewHeight, transition: "height 200ms ease-in" }}>
-
-        <CSSTransition
-          in={activeView === "form"}
-          timeout={CSS_TRANSITION_TIMEOUT}
-          classNames="form"
-          onEnter={calcHeight}
-          unmountOnExit>
-          <Inputs form={form}
-                  onRangeChange={handleRangeChange}
-                  onDateChange={handleDateChange}
-                  onFinish={toggleActiveView}/>
-        </CSSTransition>
-        <CSSTransition
-          in={activeView === "results"}
-          timeout={CSS_TRANSITION_TIMEOUT}
-          classNames="results"
-          onEnter={calcHeight}
-          unmountOnExit>
-          <Results form={form} onBack={toggleActiveView}/>
-        </CSSTransition>
-      </div>
+      <Card>
+        <Header/>
+        <main className={"main"} ref={viewRef} style={{ ...styles.main, height: viewHeight }}>
+          <CSSTransition
+            in={activeView === "inputs"}
+            timeout={CSS_TRANSITION_TIMEOUT}
+            classNames="inputs"
+            onEnter={calcHeight}
+            unmountOnExit>
+            <Inputs form={form}
+                    onRangeChange={handleRangeChange}
+                    onDateChange={handleDateChange}
+                    onFinish={toggleActiveView}/>
+          </CSSTransition>
+          <CSSTransition
+            in={activeView === "results"}
+            timeout={CSS_TRANSITION_TIMEOUT}
+            classNames="results"
+            onEnter={calcHeight}
+            unmountOnExit>
+            <Results form={form}
+                     onBack={toggleActiveView}/>
+          </CSSTransition>
+        </main>
+      </Card>
     </Layout>
   )
 }

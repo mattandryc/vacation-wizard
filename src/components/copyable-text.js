@@ -10,9 +10,11 @@ const styles = {
     marginBottom: "32px",
     cursor: "copy",
   },
+  divider: {
+  },
   text: {
     fontSize: "16px",
-    width: "100%"
+    width: "100%",
   }
 }
 
@@ -24,7 +26,7 @@ export default function({ text, title }) {
 
   return (<CopyToClipboard text={text} onCopy={handleCopy}>
     <div style={styles.div}>
-      <Divider>{title} <CopyOutlined/></Divider>
+      <Divider style={styles.divider}>{title} <CopyOutlined/></Divider>
       <Text style={styles.text}>{text}</Text>
     </div>
   </CopyToClipboard>)
