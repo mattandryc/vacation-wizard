@@ -29,7 +29,7 @@ function getShapes(width) {
   if (width <= 576 || true) {
     return (
       <>
-        <g id="circle-1" transform="translate(-180, -1080), scale(3.5)" opacity="1">
+        <g id="circle-1" transform="translate(-360, -1440), scale(4)" opacity="1">
           <g transform="matrix(1, 0, 0, 1, 0, 0)">
             <g transform="rotate(0, 170, 170)">
               <svg>
@@ -67,7 +67,7 @@ function getShapes(width) {
             </g>
           </g>
         </g>
-        <g transform="translate(215, 500), scale(2.5), rotate(45)">
+        <g transform="translate(215, 420), scale(2.5), rotate(45)">
           <svg width="438px" height="438px">
             <defs>
               <filter id="banner-diamond-shadow-1">
@@ -99,49 +99,7 @@ function Background() {
 
   return (
     <div style={styles.div}>
-      <svg style={styles.svg} viewBox="0 0 1440 900">
-        <g id="bg" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-          <g>
-            <g id="a8cf2dfe-ff6a-4a2e-ab73-f72dced0df99">
-              <g id="Group" fillRule="nonzero">
-                <g id="path-3-link" fill="url(#linearGradient-1)">
-                  <rect id="path-3" x="0" y="0" width="1440" height="900"/>
-                </g>
-                <g id="path-3-link" fill="url(#radialGradient-2)">
-                  <rect id="path-3" x="0" y="0" width="1440" height="900"/>
-                </g>
-              </g>
-              <g>
-                <mask id="mask-4" fill="white">
-                  <use xlinkHref="#path-3"/>
-                </mask>
-                <g id="path-3"/>
-                <g mask="url(#mask-4)">
-                  <g transform="translate(0, 520.312500)" id="path-7-link">
-                    <g>
-                      <rect id="path-7" fill="url(#linearGradient-5)" fillRule="nonzero" x="0" y="0" width="1440"
-                            height="379.6875"/>
-                    </g>
-                    <g>
-                      <rect id="path-7" fill="url(#linearGradient-6)" fillRule="nonzero" x="0" y="0" width="1440"
-                            height="379.6875"/>
-                    </g>
-                  </g>
-                </g>
-              </g>
-              <g>
-                <mask id="mask-8" fill="white">
-                  <use xlinkHref="#path-7"/>
-                </mask>
-                <g id="path-3"/>
-                <rect fill="url(#linearGradient-9)" fillRule="nonzero" mask="url(#mask-8)" x="0" y="333.482143"
-                      width="1440" height="566.517857"/>
-              </g>
-            </g>
-          </g>
-        </g>
-        {getShapes(width)}
-      </svg>
+
     </div>
   )
 }
