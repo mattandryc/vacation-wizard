@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="900" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FAFCFE" offset="0%"></stop>
+            <stop stop-color="#F9FCFE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FAFCFE" offset="0%"></stop>
+            <stop stop-color="#F3F9FC" offset="50%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#F8FCFF" offset="25%"></stop>
+            <stop stop-color="#F8FBFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FCFDFF" offset="60%"></stop>
+            <stop stop-color="#FCFDFE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(128, 128)" fill="url(#linearGradient-1)" id="circle-sm">
+
+            <circle cx="140" cy="140" r="140"/>
+            <g transform="translate(360,540)" fill="url(#linearGradient-2)" id="circle-bg">
+
+                <circle cx="200" cy="200" r="200"/>
+            </g>
+            <g transform="translate(1535.312946, 837.298324)" fill="url(#linearGradient-3)" id="Rectangle">
+                <g>
+                    <g>
+                        <g>
+                            <rect x="0" y="0" width="180" height="180"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(904.057710, 0.174416)" fill="url(#linearGradient-4)" id="Path">
+                <g>
+                    <g>
+                        <g>
+                            <polygon points="0 400 400 0 800 400 400 800"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

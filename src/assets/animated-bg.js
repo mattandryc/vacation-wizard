@@ -3,89 +3,79 @@ import React from "react"
 const styles = {
   div: {
     position: "absolute",
-    top: 64,
-    height: "100vh",
-    width: "100vw",
-    zIndex: 0,
+    height: "100%",
+    width: "100%",
+    top: 0,
+    left: 0,
+    zIndex: -1,
+  },
+  svg: {
+    overflow: "hidden",
+    minWidth: "100%"
   }
 }
 function AnimatedBg() {
   return (
     <div style={styles.div}>
-      <svg viewBox="0 0 1440 448">
-        <g transform="translate(346.85341620546023, 26.003935837683173)" opacity="1" frame="332">
-          <g transform="matrix(1, 0, 0, 1, 0, 0)">
-            <g transform="rotate(0, 170, 170)">
-              <svg>
-                <defs>
-                  <filter id="banner-circle-shadow-1">
-                    <feDropShadow dx="10" dy="10" stdDeviation="10" floodColor="rgba(0,0,0,0.05)"/>
-                  </filter>
-                  <linearGradient id="banner-circle-fill-1" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: "rgb(250, 252, 254)" }}/>
-                    <stop offset="100%" style={{ stopColor: "rgb(249, 252, 254)" }}/>
-                  </linearGradient>
-                </defs>
-                <circle cx="170" cy="170" r="140" fill="url(#banner-circle-fill-1)"
-                        filter="url(#banner-circle-shadow-1)"/>
-              </svg>
-            </g>
-          </g>
-        </g>
-        <g transform="translate(-216.083211265619, 178.66243923801153)" opacity="1" frame="332">
-          <g transform="matrix(1, 0, 0, 1, 0, 0)">
-            <g transform="rotate(0, 230, 230)">
-              <svg>
-                <defs>
-                  <filter id="banner-circle-shadow-2">
-                    <feDropShadow dx="10" dy="10" stdDeviation="10" flood-color="rgba(0,0,0,0.05)"/>
-                  </filter>
-                  <linearGradient id="banner-circle-fill-2" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: "rgb(250, 252, 254)" }}/>
-                    <stop offset="50%" style={{ stopColor: "rgb(243, 249, 252)" }}/>
-                  </linearGradient>
-                </defs>
-                <circle cx="230" cy="230" r="200" fill="url(#banner-circle-fill-2)"
-                        filter="url(#banner-circle-shadow-2)"/>
-              </svg>
-            </g>
-          </g>
-        </g>
-        <g transform="translate(1309.7651804159086, 170.6252146889317)" opacity="1" frame="332">
-          <g transform="matrix(1, 0, 0, 1, 0, 0)">
-            <g transform="rotate(0, 120, 120)">
-              <svg>
-                <defs>
-                  <filter id="banner-rect-shadow-1">
-                    <feDropShadow dx="10" dy="10" stdDeviation="10" flood-color="rgba(0,0,0,0.05)"/>
-                  </filter>
-                  <linearGradient id="banner-rect-fill-1" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="25%" style={{ stopColor: "rgb(248, 252, 255)" }}/>
-                    <stop offset="100%" style={{ stopColor: "rgb(248, 251, 255)" }}/>
-                  </linearGradient>
-                </defs>
-                <rect x="30" y="30" width="180" height="180" fill="url(#banner-rect-fill-1)"
-                      filter="url(#banner-rect-shadow-1)"/>
-              </svg>
-            </g>
-          </g>
-        </g>
-        <g transform="translate(707.838081424313, -635.1872512694249)" opacity="1" frame="332">
-          <g transform="matrix(1, 0, 0, 1, 0, 0)">
-            <g transform="rotate(0, 430, 430)">
-              <svg width="860" height="860">
-                <defs>
-                  <filter id="banner-diamond-shadow-1">
-                    <feDropShadow dx="10" dy="10" stdDeviation="10" floodColor="rgba(0,0,0,0.05)"/>
-                  </filter>
-                  <linearGradient id="banner-diamond-fill-1" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="60%" style={{ stopColor: "rgb(252, 253, 255)" }}/>
-                    <stop offset="100%" style={{ stopColor: "rgb(252, 253, 254)" }}/>
-                  </linearGradient>
-                </defs>
-                <path d="M 30 430 430 30 830 430 430 830 Z" fill="url(#banner-diamond-fill-1)"
-                      filter="url(#banner-diamond-shadow-1)"/>
-              </svg>
+      <svg height="100%" width="100%">
+        <defs>
+          <linearGradient x1="-5.68700053%" y1="31.9594527%" x2="84.7892757%" y2="65.8807889%" id="linearGradient-1">
+            <stop stopColor="#FBFCFD" offset="0%"/>
+            <stop stopColor="#F8FCFF" offset="100%"/>
+          </linearGradient>
+          <radialGradient cx="49.4552%" cy="50.0000285%" fx="49.4552%" fy="50.0000285%" r="94.8348304%" gradientTransform="translate(0.494552,0.500000),scale(0.625000,1.000000),rotate(90.000000),translate(-0.494552,-0.500000)" id="radialGradient-2">
+            <stop stopColor="#FFFFFF" stopOpacity="0.5" offset="0%"/>
+            <stop stopColor="#EDF6FF" stopOpacity="0.578179633" offset="100%"/>
+          </radialGradient>
+          <rect id="path-3" x="0" y="0" width="1440" height="900"/>
+          <linearGradient x1="72.8463444%" y1="12.5451885%" x2="72.8463444%" y2="295.836589%" id="linearGradient-5">
+            <stop stopColor="#FFFFFF" stopOpacity="0" offset="0%"/>
+            <stop stopColor="#9FD7FF" stopOpacity="0.383058348" offset="100%"/>
+          </linearGradient>
+          <linearGradient x1="16.6159843%" y1="46.5238572%" x2="5.85340543%" y2="53.4761428%" id="linearGradient-6">
+            <stop stopColor="#FFFFFF" stopOpacity="0" offset="0%"/>
+            <stop stopColor="#F2F7FC" offset="100%"/>
+          </linearGradient>
+          <rect id="path-7" x="0" y="0" width="1440" height="900"/>
+          <linearGradient x1="54.7550093%" y1="16.6478641%" x2="54.7550093%" y2="112.331979%" id="linearGradient-9">
+            <stop stopColor="#FFFFFF" stopOpacity="0" offset="0%"/>
+            <stop stopColor="#D2ECFF" stopOpacity="0.225387893" offset="100%"/>
+          </linearGradient>
+        </defs>
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g>
+            <g id="a8cf2dfe-ff6a-4a2e-ab73-f72dced0df99">
+              <g id="Group" fillRule="nonzero">
+                <g id="path-3-link" fill="url(#linearGradient-1)">
+                  <rect id="path-3" x="0" y="0" width="1440" height="900"/>
+                </g>
+                <g id="path-3-link" fill="url(#radialGradient-2)">
+                  <rect id="path-3" x="0" y="0" width="1440" height="900"/>
+                </g>
+              </g>
+              <g id="矩形备份-32-Clipped">
+                <mask id="mask-4" fill="white">
+                  <use xlinkHref="#path-3"/>
+                </mask>
+                <g id="path-3"/>
+                <g id="矩形备份-32" mask="url(#mask-4)">
+                  <g transform="translate(0.000000, 520.312500)" id="path-7-link">
+                    <g>
+                      <rect id="path-7" fill="url(#linearGradient-5)" fillRule="nonzero" x="0" y="0" width="1440" height="379.6875"/>
+                    </g>
+                    <g>
+                      <rect id="path-7" fill="url(#linearGradient-6)" fillRule="nonzero" x="0" y="0" width="1440" height="379.6875"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <g id="矩形-Clipped">
+                <mask id="mask-8" fill="white">
+                  <use xlinkHref="#path-7"/>
+                </mask>
+                <g id="path-3"/>
+                <rect id="矩形" fill="url(#linearGradient-9)" fillRule="nonzero" mask="url(#mask-8)" x="0" y="333.482143" width="1440" height="566.517857"/>
+              </g>
             </g>
           </g>
         </g>

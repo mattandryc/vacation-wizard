@@ -1,25 +1,28 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { Layout } from "antd"
+
+import Background from "./background"
 import AppBar from "./app-bar"
 import VersionTag from "./version-tag"
 
 import "../assets/antd-overrides.css"
 import "../assets/transitions.css"
-import AnimatedBg from "../assets/animated-bg"
+
 
 const { Header, Content, Footer } = Layout
 
 const styles = {
   layout: {
-    backgroundColor: "transparent",
-    minHeight: "100vh"
+    minHeight: "100vh",
+    position: "relative",
+    backgroundColor: "transparent"
   },
   header: {
     boxShadow: "0 2px 8px #f0f1f2",
     backgroundColor: "white",
     textAlign: "center",
     padding: "0",
+
   },
   div: {
     display: "flex",
@@ -38,19 +41,9 @@ const styles = {
 
 export default ({ children }) => {
 
-  const data = useStaticQuery(graphql`
-      query SiteTitleQuery {
-          site {
-              siteMetadata {
-                  title
-              }
-          }
-      }
-  `)
-
   return (
     <Layout style={styles.layout}>
-      <AnimatedBg/>
+      <Background/>
       <Header style={styles.header}>
         <AppBar/>
       </Header>
