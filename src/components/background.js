@@ -1,24 +1,15 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-
-import PropTypes from "prop-types"
-import useWindowSize from "../hooks/useWindowSize"
+import Img from 'gatsby-background-image'
 
 const styles = {
   img: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    minWidth: "100%",
-    minHeight: "100%",
-    zIndex: -1,
+      backgroundSize: "cover"
   }
 }
 
-function Background() {
+function Background({children}) {
 
-  const { width } = useWindowSize();
 
   const data = useStaticQuery(graphql`
       query {
@@ -34,7 +25,8 @@ function Background() {
 
 
   return (
-   <Img style={styles.img} fluid={data.bg.childImageSharp.fluid} />
+    <Img style={styles.img}           backgroundSize={"cover"}
+         fluid={data.bg.childImageSharp.fluid}>{children}</Img>
   )
 }
 

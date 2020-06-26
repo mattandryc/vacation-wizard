@@ -21,7 +21,7 @@ const styles = {
     // backgroundColor: "blue",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "center"
 
   },
   footer: {}
@@ -30,11 +30,12 @@ const styles = {
 export default ({ children }) => {
 
   return (
-    <Layout style={styles.layout}>
-      <Background/>
-      <Content style={styles.content}>
-        {children}
-      </Content>
-    </Layout>
+    <Background>
+      <Layout style={styles.layout}>
+        <Content style={styles.content}>
+          {children}
+        </Content>
+      </Layout>
+    </Background>
   )
 }
