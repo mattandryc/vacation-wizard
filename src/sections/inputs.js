@@ -9,7 +9,7 @@ import DatePicker from '../components/date-picker';
 
 const styles = {
     form: {
-        maxWidth: "256px"
+        maxWidth: "320px"
     },
     icon: {
         color: "rgba(0, 0, 0, 0.25)",
@@ -26,7 +26,7 @@ const FormItem = ({ name, message, children, ...otherProps }) => {
         <Form.Item
             name={name}
             gutter={[0, 40]}
-            rules={[{ required: false, message }]}
+            rules={[{ required: true, message }]}
             {...otherProps}
         >
             {children}

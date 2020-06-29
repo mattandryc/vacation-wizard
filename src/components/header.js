@@ -27,5 +27,5 @@ const styles = {
 export default _ => (
   <header style={styles.header}>
     <Title style={styles.title}>Vacation Wizard</Title>
-    <Link style={styles.link} rel="norefferer noopener" href="https://ant.design/index-cn">made with <AntDesignOutlined/> in Seattle</Link>
+    <Link style={styles.link} rel="norefferer" target="_blank" href="https://github.com/mattandryc/vacation-wizard">made with <AntDesignOutlined/> in Seattle</Link>
   </header>);

@@ -80,7 +80,7 @@ export default function() {
             in={activeView === "results"}
             timeout={CSS_TRANSITION_TIMEOUT}
             classNames="results"
-            onEnter={calcHeight}
+            onEnter={width > 600 ? calcHeight : null}
             unmountOnExit>
             <Results form={form}
                      onBack={toggleActiveView}/>

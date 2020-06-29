@@ -8,7 +8,7 @@ import AirbnbLogo from "../assets/airbnb-logo"
 
 const styles = {
   div: {
-    maxWidth: "256px",
+    maxWidth: "320px",
   },
   alert: {
     fontSize: "16px",

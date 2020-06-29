@@ -1,9 +1,8 @@
 .card {
-    background-color: hsla(0, 0%, 100%, 1);
     border-radius: 0;
 }
 
-@media all and (min-width: 376px) {
+@media all and (min-width: 601px) {
     .card {
         border-radius: 8px;
     }
