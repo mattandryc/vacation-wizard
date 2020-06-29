@@ -2,7 +2,7 @@
     border-radius: 0;
 }
 
-@media all and (min-width: 601px) {
+@media all and (min-width: 601px) and (min-height: 500px) {
     .card {
         border-radius: 8px;
     }

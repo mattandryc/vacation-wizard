@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/vacation-wizard",
   siteMetadata: {
     title: `Vacation Wizard`,
     description: `Kick off your next, great vacation with this away message generator.`,

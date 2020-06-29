@@ -1,3 +1,1 @@
-- background
-- favicon
-- container at smaller viewports
+Check out a deployment [here](demohttps://mattandryc.github.io/vacation-wizard/)
