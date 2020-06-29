@@ -69,6 +69,7 @@ export default function({ placeholder, form, ...otherProps }) {
                style={{ flex: "auto" }}
         />
         <span
+          role="presentation"
           style={{ ...styles.span, ...dynamicStyles }}
           onClick={handleCustomSelect}
         >
@@ -86,8 +87,9 @@ export default function({ placeholder, form, ...otherProps }) {
       size="large"
       style={styles.select}
       {...otherProps}
+      role="list"
     >
-      {options.map(option => <Option value={option} key={option} style={styles.option}>{option}</Option>)}
+      {options.map(option => <Option role="list-item" value={option} key={option} style={styles.option}>{option}</Option>)}
     </Select>
   )
 }

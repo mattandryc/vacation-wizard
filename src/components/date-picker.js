@@ -35,6 +35,7 @@ export default function({ name, placeholder, onDateChange, variant, startDate, e
       size="large"
       {...otherProps}
       onChange={handleChange}
+      inputReadOnly={true}
     />
   )
 }

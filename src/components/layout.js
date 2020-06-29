@@ -2,7 +2,6 @@ import React from "react"
 import { Layout } from "antd"
 
 import Background from "./background"
-import VersionTag from "./version-tag"
 
 import "../assets/antd-overrides.css"
 import "../assets/transitions.css"

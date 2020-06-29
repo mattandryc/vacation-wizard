@@ -19,6 +19,7 @@ export default function({ name, placeholder, ...otherProps }) {
       style={style}
       format={dateFormat}
       size="large"
+      inputReadOnly={true}
       {...otherProps}
     />
   )
